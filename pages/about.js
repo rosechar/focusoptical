@@ -15,7 +15,7 @@ function Services() {
                 From the owner, Tom Hamilton
               </Typography>
               <Typography>
-                Hello, my name is Tom Hamilton. I'm an optician and I own and operate Focus Optical. I opened the store in 1982. We are a full service optical store, with eye examinations performed by Dr. Diane Galper, Optometrist.
+                Hello, my name is Tom Hamilton. I&apos;m an optician and I own and operate Focus Optical. I opened the store in 1982. We are a full service optical store, with eye examinations performed by Dr. Diane Galper, Optometrist.
               </Typography>
               <Typography>
                 We specialize in making eyelgasses and we also sell contact lenses. I have been making eyeglasses since 1977, with over 45 years of experience! 

@@ -42,7 +42,7 @@ function ServiceDetails({ option }) {
             
         </Stack>
         <Box height={300} position="relative" > 
-        <Image layout="fill" objectFit="cover" src={DetailOptions[option].img} />
+        <Image alt="" layout="fill" objectFit="cover" src={DetailOptions[option].img} />
         </Box>
         </React.Fragment>
     );

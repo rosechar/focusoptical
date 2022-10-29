@@ -50,7 +50,7 @@ export default function Index() {
             >
             {itemData.map((item) => (
                 <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
-                  <Image  quality={50} layout="fill" objectFit="cover" src={item.img.src}></Image>
+                  <Image alt="" quality={50} layout="fill" objectFit="cover" src={item.img.src}></Image>
                 </ImageListItem>
             ))}
             </ImageList>
@@ -171,7 +171,7 @@ export default function Index() {
             <Card sx={{ minWidth: 275, alignSelf: "center",  margin:3}}>
               <CardContent>
                 <Typography variant="h6" fontWeight={1} fontStyle={"italic"} marginBottom={1} >
-                “The owner was very helpful...I'll come here from now on”
+                “The owner was very helpful...I&apos;ll come here from now on”
                 </Typography>
               <Link sx={{ mb: 1.5, padding: 3}} href="https://www.google.com/maps/reviews/@42.6354012,-83.1718076,17z/data=!3m1!4b1!4m6!14m5!1m4!2m3!1sChdDSUhNMG9nS0VJQ0FnSURHZ0phel93RRAB!2m1!1s0x0:0xddd76cb4db1ee92?hl=en-US" underline="none" color="text.secondary">
                   - Ed Zomby
