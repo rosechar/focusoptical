@@ -16,8 +16,8 @@ const lightTheme = createTheme({
 function FocusOptical({ Component, pageProps }) {
   return( 
     <React.Fragment>
-      <CssBaseline />
       <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
         <Layout>
           <Component {...pageProps} />
         </Layout>
