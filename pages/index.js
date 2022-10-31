@@ -66,17 +66,17 @@ export default function Index() {
             ))}
             </ImageList>
             </Fade>
-            <Box pb={1} sx={{ maxWidth:400, alignSelf:"center"}}>
-            <Button href="/contact" variant="outlined" startIcon={<CalendarIcon/>}>
+            <Box pb={2} sx={{ maxWidth:400, alignSelf:"center"}}>
+            <Button size="large" href="/contact" variant="outlined" startIcon={<CalendarIcon/>}>
               Schedule an Appointment
             </Button>
             </Box>
-            <Divider><Typography lineHeight={2} variant="overline" fontWeight={1} fontSize={20}>Services</Typography></Divider>
+            <Divider><Typography lineHeight={1} variant="overline" fontWeight={1} fontSize={20}>Services</Typography></Divider>
               <ServicesList/>
             <Divider > <Typography lineHeight={2} variant="overline" fontWeight={1} fontSize={20}>What Makes Us Different</Typography></Divider>
               <WhatMakesUsDifferent/>
             <Divider ><Typography lineHeight={2} variant="overline" fontWeight={1} fontSize={20}>Testimonals</Typography></Divider>
-              <Box ml={{xs:2, md:30}} mr={{xs:2, md:30}} height={140} >
+              <Box ml={{xs:2, md:30}} mr={{xs:2, md:30}} height={{xs:140, md:110}} >
               <Testimonals/>
               </Box>
             </Stack>
