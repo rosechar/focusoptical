@@ -6,9 +6,9 @@ import {
 
 function Services() {
     return (
-            <React.Fragment sx={{maxWidth:500}}>
-            <Stack alignItems="left" spacing={2} p={{xs:3, md:7}} >
-              <Typography alignSelf="center" variant="h4" fontWeight={1}>
+            <React.Fragment >
+            <Stack spacing={3} p={{xs:3}} pl={{md:30}} pr={{md:30}} >
+              <Typography alignSelf="center" variant="h4" lineHeight={1} fontWeight={1}>
                 About Focus Optical
               </Typography>
               <Typography alignSelf="center"  fontStyle="italic" >

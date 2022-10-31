@@ -65,7 +65,7 @@ export default function Layout({ children }) {
           Rochester Hills, MI 
         </Typography>
         <Typography fontSize={{xs:".7rem", sm:".8rem"}}  lineHeight={1.5} variant="overline" textAlign={"right"} >
-          Since 1984
+          Since 1982
         </Typography>
       </Box>
       
@@ -103,7 +103,7 @@ export default function Layout({ children }) {
           Focus Optical
         </Typography>
         <Typography variant="overline" marginTop={2} marginLeft={2}>
-          Since 1984
+          Since 1982
         </Typography>
         <Typography variant="b1" marginTop={2} marginLeft={2}>
         2046 W Auburn Rd,
