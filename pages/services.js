@@ -51,7 +51,7 @@ function Services() {
             
             <ServiceDetails option={selected} ></ServiceDetails>
             <Stack alignItems="center" >
-            <Button  href="/contact" variant="outlined" sx={{ m:3}} startIcon={<CalendarIcon/>}>
+            <Button size="large" href="/contact" variant="outlined" sx={{ m:3}} startIcon={<CalendarIcon/>}>
               Schedule an Appointment
             </Button>
             </Stack>

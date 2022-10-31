@@ -4,13 +4,23 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
+
+const lightTheme = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
 
 function MyApp({ Component, pageProps }) {
   return( 
-    <><CssBaseline /><Layout>
+    <>
+    <CssBaseline />
+    <ThemeProvider theme={lightTheme}>
+    <Layout>
       <Component {...pageProps} />
-    </Layout></>
+    </Layout>
+    </ThemeProvider></>
   )
 }
 
