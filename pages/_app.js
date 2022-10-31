@@ -5,6 +5,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
+import React from 'react';
 
 const lightTheme = createTheme({
   palette: {
@@ -12,16 +13,17 @@ const lightTheme = createTheme({
   },
 });
 
-function MyApp({ Component, pageProps }) {
+function FocusOptical({ Component, pageProps }) {
   return( 
-    <>
-    <CssBaseline />
-    <ThemeProvider theme={lightTheme}>
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-    </ThemeProvider></>
+    <React.Fragment>
+      <CssBaseline />
+      <ThemeProvider theme={lightTheme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </React.Fragment>
   )
 }
 
-export default MyApp
+export default FocusOptical
