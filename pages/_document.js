@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import { getInitColorSchemeScript } from '@mui/joy/styles';
+import { getInitColorSchemeScript } from '@mui/material/styles';
 import createEmotionCache from '../utility/createEmotionCache';
 
 export default class MyDocument extends Document {
@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
-          {getInitColorSchemeScript()}
+          {getInitColorSchemeScript({defaultMode:"system"})}
           <Main />
           <NextScript />
         </body>

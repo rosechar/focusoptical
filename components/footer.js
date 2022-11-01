@@ -56,7 +56,7 @@ export default function Footer() {
         </Stack>
       </Stack>
         <Stack direction={"row"}>
-        <TableContainer sx={{maxWidth:200}}>
+        {/* <TableContainer sx={{maxWidth:200}}>
         <Table sx={{ [`& .${tableCellClasses.root}`]: { borderBottom: "none"}}} size="small" >
             <TableBody>
             {rows.map((row) => (
@@ -95,7 +95,7 @@ export default function Footer() {
             ))}
             </TableBody>
         </Table>
-        </TableContainer>
+        </TableContainer> */}
         </Stack>
         </Stack>
     )

@@ -9,26 +9,24 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import createEmotionCache from '../utility/createEmotionCache';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
+import { pink } from '@mui/material/colors';
 import Head from 'next/head'
+import {
+  Experimental_CssVarsProvider as CssVarsProvider,
+  useColorScheme,
+} from '@mui/material/styles';
+import { experimental_extendTheme as extendTheme} from '@mui/material/styles';
+
 
 
 const clientSideEmotionCache = createEmotionCache();
 
 const FocusOptical = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  );
   return (
-    <div>
+    <CacheProvider value={emotionCache}>
+    <CssVarsProvider defaultMode='system'>
+      
     <Head>
         <title>Focus Optical - Rochester Hills Optometrist Eyeglass Shop</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
@@ -39,15 +37,17 @@ const FocusOptical = (props) => {
         <meta name="msapplication-TileColor" content="#da532c"/>
         <meta name="theme-color" content="#ffffff"/>
     </Head>
-    <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={theme}>
+
+    
+      
+        
         <CssBaseline />
         <Layout>
         <Component {...pageProps} />
         </Layout>
-      </ThemeProvider>
+      
+    </CssVarsProvider>
     </CacheProvider>
-    </div>
   );
 };
 
