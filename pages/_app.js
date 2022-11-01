@@ -20,7 +20,7 @@ const FocusOptical = (props) => {
   return (
     
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={lightThemeOptions}>
         <CssBaseline />
         <Layout>
         <Component {...pageProps} />
