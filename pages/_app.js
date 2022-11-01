@@ -27,7 +27,6 @@ const lightTheme = createTheme(lightThemeOptions);
 
 const FocusOptical = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  const { router } = props;
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={lightTheme}>

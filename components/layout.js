@@ -12,7 +12,6 @@ import {
   TableBody,
   SvgIcon
 } from "@mui/material";
-import { pink } from '@mui/material/colors';
 
 const HomeIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" {...props}>
@@ -61,7 +60,7 @@ export default function Layout({ children }) {
 
       <Typography width={{xs:"25px", sm:"40px"}} height={{xs:"25px", sm:"40px"}} >
       
-      <HomeIcon sx={{ color: pink[500] }}></HomeIcon>
+      <HomeIcon ></HomeIcon>
       </Typography>
       
       </Stack>
@@ -117,7 +116,7 @@ export default function Layout({ children }) {
         <Link href="tel:2488528830" variant="b1" underline="none" color="inherit"marginLeft={2}>
         (248) 852-8830
         </Link>
-        <Typography marginTop={3} marginLeft={2} fontSize=".7rem">© 2022. <a target="_blank" href="https://icons8.com/icon/3695/glasses">Glasses</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></Typography>
+        <Typography marginTop={3} marginLeft={2} fontSize=".7rem">© 2022. <a target="_blank" rel="noreferrer" href="https://icons8.com/icon/3695/glasses">Glasses</a> icon by <a target="_blank" rel="noreferrer" href="https://icons8.com">Icons8</a></Typography>
         </Stack>
       </Stack>
 
