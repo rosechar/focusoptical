@@ -4,33 +4,41 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import createCache from '@emotion/cache';
+
+
 import React from 'react';
 
+const createEmotionCache = () => {
+  return createCache({ key: 'css', prepend: true });
+};
 
+const lightThemeOptions = createTheme({
+  palette: {
+    mode: 'light',
+  },
+});
 
-function FocusOptical({ Component, pageProps }) {
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+const clientSideEmotionCache = createEmotionCache();
 
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode: prefersDarkMode ? 'dark' : 'light',
-        },
-      }),
-    [prefersDarkMode],
-  );
+const lightTheme = createTheme(lightThemeOptions);
 
-  return( 
-      <ThemeProvider theme={theme}>
-      <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+const FocusOptical = (props) => {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const { router } = props;
+  const getLayout =
+  router.pathname.includes('/admin') ? ((page) => <SessionProvider children={page} />)
+  : ((page) => <Layout children={page} />);
+  return (
+    <CacheProvider value={emotionCache}>
+      <ThemeProvider theme={lightTheme}>
+        <CssBaseline />
+        {getLayout(<Component {...pageProps} />)}
       </ThemeProvider>
-  )
-}
+    </CacheProvider>
+  );
+};
 
 export default FocusOptical
