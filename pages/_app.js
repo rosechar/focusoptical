@@ -7,20 +7,28 @@ import '@fontsource/roboto/700.css';
 import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import createEmotionCache from '../utility/createEmotionCache';
-import lightThemeOptions from '../utility/lightTheme';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
-
 
 const clientSideEmotionCache = createEmotionCache();
 
-const lightTheme = createTheme(lightThemeOptions);
-
 const FocusOptical = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? 'dark' : 'light',
+        },
+      }),
+    [prefersDarkMode],
+  );
   return (
     
     <CacheProvider value={emotionCache}>
-      <ThemeProvider theme={lightThemeOptions}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <Layout>
         <Component {...pageProps} />
