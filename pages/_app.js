@@ -28,14 +28,13 @@ const lightTheme = createTheme(lightThemeOptions);
 const FocusOptical = (props) => {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const { router } = props;
-  const getLayout =
-  router.pathname.includes('/admin') ? ((page) => <SessionProvider children={page} />)
-  : ((page) => <Layout children={page} />);
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={lightTheme}>
         <CssBaseline />
-        {getLayout(<Component {...pageProps} />)}
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </CacheProvider>
   );
