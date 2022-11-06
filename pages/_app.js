@@ -4,18 +4,14 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
+import { CssBaseline } from "@mui/material";
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import createEmotionCache from '../utility/createEmotionCache';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import React from 'react';
-import { pink } from '@mui/material/colors';
 import Head from 'next/head'
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
-  useColorScheme,
 } from '@mui/material/styles';
-import { experimental_extendTheme as extendTheme} from '@mui/material/styles';
 
 
 

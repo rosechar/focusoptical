@@ -17,7 +17,7 @@ import {
 import CalendarIcon from '@mui/icons-material/CalendarMonthOutlined';
 import shopImg from '../components/images/home.jpeg';
 import shopImg2 from '../components/images/home3.jpeg';
-import docImg from '../components/images/doc.jpg';
+import tomImg from '../components/images/tom.jpg';
 import shopImg1 from '../components/images/shop.jpeg';
 import Image from 'next/legacy/image';
 import Testimonals from "../components/testimonials";
@@ -93,7 +93,7 @@ const itemData = [
       img: contactImg
     },
     {
-      img: docImg,
+      img: tomImg,
       
     },
     {
