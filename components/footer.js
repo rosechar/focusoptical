@@ -43,7 +43,7 @@ export default function Footer() {
           Focus Optical
         </Typography>
         <Typography variant="overline"  marginLeft={2}>
-          Since 1982
+          Since 1984
         </Typography>
         <Typography variant="b1"  marginLeft={2}>
         2046 W Auburn Rd,
